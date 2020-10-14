@@ -35,9 +35,6 @@ for (var i = 0; i < email_list.length; i++) {
 }
 
 // ***************** Sign-up Request *****************
-console.log(' ');
-console.log('SIGN-UP REQUEST');
-
 if (email_verified !== 'present') {
   // Message in console
   console.log('The user\'s e-mail is not in the array.');
@@ -46,11 +43,15 @@ if (email_verified !== 'present') {
 
   if ((subscription_request === 'YES') || (subscription_request === 'yes') || (subscription_request === 'Yes')) {
     // Joining the mailing list
+    console.log(' ');
+    console.log('SIGN-UP REQUEST ACCEPTED');
     email_list.push(user_email);
     console.log('Your e-mail ' + user_email + ' has been added to our mailing list.');
     console.log('The user\'s e-mail ' + user_email + ' has been added to the array. The new array is: ' + email_list);
   } else if ((subscription_request === 'NO') || (subscription_request === 'no') || (subscription_request === 'No')) {
     // NOT joining the mailing list
+    console.log(' ');
+    console.log('SIGN-UP REQUEST DENIED');
     console.log('Thank you for visiting our website. If you ever change your mind, please reload the page.');
   } else {
     // Error message
