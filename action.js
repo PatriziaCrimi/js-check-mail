@@ -4,7 +4,8 @@ var user_email = prompt('Please enter your e-mail address.');
 
 // ***************** Check data in Console *****************
 console.log('INPUT CHECK');
-console.log('This is your array: ' + email_list);
+console.log('This is your array: ');
+console.log(email_list);
 console.log('This array contains ' + email_list.length + ' elements.');
 console.log('The user\'s e-mail is: ' + user_email);
 
@@ -16,7 +17,7 @@ document.getElementById('user-email').innerHTML = user_email;
 console.log(' ');
 console.log('EMAIL CHECK');
 
-for (var i = 0; i < email_list.length; i++) {
+for (var i = 0; i < email_list.length && email_verified !== 'present'; i++) {
   if (user_email === email_list[i]) {
     // Confirmation of presence
     var email_verified = 'present';
@@ -57,9 +58,10 @@ if (email_verified !== 'present') {
     console.log('SIGN-UP REQUEST ACCEPTED');
     email_list.push(user_email);
     console.log('Your e-mail ' + user_email + ' has been added to our mailing list.');
-    console.log('The user\'s e-mail ' + user_email + ' has been added to the array');
+    console.log('The user\'s e-mail ' + user_email + ' has been added to the array.');
     console.log('It now contains ' + email_list.length + ' elements.');
-    console.log('The new array is: ' + email_list);
+    console.log('The new array is: ');
+    console.log(email_list);
     // Output in HTML
     document.getElementById('signup-request').innerHTML = 'Sign-up request accepted';
     document.getElementById('signup-accepted').innerHTML = 'Your e-mail ' + user_email + ' has been added to our mailing list.';
