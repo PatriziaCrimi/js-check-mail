@@ -31,6 +31,21 @@ span {
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
+h1::before,
+h1::after {
+  content: '\f199';
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+}
+
+h1::before {
+  margin-right: 40px;
+}
+
+h1::after {
+  margin-left: 40px;
+}
+
 .database-info-section,
 .user-info-section,
 .signup-section {
@@ -40,6 +55,19 @@ span {
 .database-info-section p,
 .user-info-section p {
   padding-left: 20px;
+}
+
+.signup-section h2#signup-request-title {
+  padding-bottom: 30px;
+}
+
+.signup-section h2#signup-request-title::before {
+  content: '\f234';
+  font-weight: 700;
+  font-family: "Font Awesome 5 Free";
+  margin-right: 20px;
+  color: #4B088A;
+  text-shadow: 3px 3px #D8CEF6;
 }
 
 .signup-section h3#signup-request {
