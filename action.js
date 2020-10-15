@@ -2,13 +2,13 @@
 var email_list = ['patrizia@alice.it', 'moira@tiscali.it', 'giovanni@libero.it', 'cinzia@gmail.com', 'mel@email.com', 'laura@virgilio.it', 'luigi@gmail.com', 'juan@alice.it', 'valentina@gmail.com'];
 var user_email = prompt('Please enter your e-mail address.');
 
-// ***************** Console input check *****************
+// ***************** Check data in Console *****************
 console.log('INPUT CHECK');
 console.log('This is your array: ' + email_list);
 console.log('This array contains ' + email_list.length + ' elements.');
 console.log('The user\'s e-mail is: ' + user_email);
 
-// ***************** HTML input print *****************
+// ***************** Print data in HTML *****************
 document.getElementById('emails-number').innerHTML = email_list.length;
 document.getElementById('user-email').innerHTML = user_email;
 
@@ -77,6 +77,6 @@ if (email_verified !== 'present') {
   } else {
     // Error message
     console.log('ERROR: Invalid value was entered to our sign-up request. Please reload the page.');
-    document.getElementById('signup-denied').innerHTML = 'ERROR: Invalid value was entered to our sign-up request. Please reload the page.';
+    document.getElementById('error').innerHTML = 'ERROR: Invalid value was entered to our sign-up request. Please reload the page.';
   }
 }
